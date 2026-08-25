@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import { Card, Table, Td, PriorityBadge } from '../components/ui'
+import { approvalQueue as initialApprovals, approvalStats as initialStats } from '../data'
 import {
   CheckCircle2, XCircle, AlertTriangle, Clock, ShieldAlert,
   Search, Filter, UserCheck, ChevronRight, X, ArrowUpRight,
@@ -44,9 +45,9 @@ function StageBadge({ stage }) {
 
 // ─── Main Approvals Component ──────────────────────────
 export default function Approvals() {
-  const [approvals, setApprovals] = useState([])
-  const [stats, setStats] = useState({ total_pending: 0, total_escalated: 0, ceo_pending: 0, pending_value: 0, total_count: 0 })
-  const [loading, setLoading] = useState(true)
+  const [approvals, setApprovals] = useState(initialApprovals)
+  const [stats, setStats] = useState(initialStats)
+  const [loading, setLoading] = useState(false)
 
   const [filterStage, setFilterStage] = useState('All')
   const [filterStatus, setFilterStatus] = useState('All')
@@ -74,7 +75,7 @@ export default function Approvals() {
     priority: 'Normal',
     current_stage: 'Dept Manager',
     status: 'Pending',
-    rejection_reason: '',
+    updated_by: 'Procurement Specialist',
   })
   const [submittingEdit, setSubmittingEdit] = useState(false)
 
@@ -86,23 +87,26 @@ export default function Approvals() {
   const stagesList = ['Dept Manager', 'Finance', 'Procurement', 'CEO']
   const statusList = ['Pending', 'Approved', 'Rejected', 'Escalated', 'Revision Requested']
 
-  // ─── Fetch Data ──────────────────────────────────────
+  // ─── Fetching ────────────────────────────────────────
   const fetchAll = async () => {
-    setLoading(true)
     try {
       const params = new URLSearchParams()
       if (filterStage !== 'All') params.append('stage', filterStage)
       if (filterStatus !== 'All') params.append('status', filterStatus)
       if (searchTerm) params.append('search', searchTerm)
 
-      const [appRes, statsRes] = await Promise.all([
+      const [aRes, sRes] = await Promise.all([
         fetch(`/api/approvals?${params}`),
         fetch('/api/approvals/stats'),
       ])
-      const [appJson, statsJson] = await Promise.all([appRes.json(), statsRes.json()])
-
-      if (appJson.success) setApprovals(appJson.data)
-      if (statsJson.success) setStats(statsJson.data)
+      if (aRes.ok) {
+        const aJ = await aRes.json()
+        if (aJ.success && aJ.data && aJ.data.length > 0) setApprovals(aJ.data)
+      }
+      if (sRes.ok) {
+        const sJ = await sRes.json()
+        if (sJ.success && sJ.data) setStats(sJ.data)
+      }
     } catch (err) {
       console.error(err)
     } finally {

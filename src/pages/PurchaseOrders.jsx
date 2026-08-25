@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import { Card, Table, Td } from '../components/ui'
+import { purchaseOrders as initialOrders, vendors as initialVendors, requisitions as initialRequisitions } from '../data'
 import {
   Plus, X, Search, Filter, FileText, Truck, DollarSign,
   Clock, CheckCircle2, AlertTriangle, ChevronRight,
@@ -68,11 +69,11 @@ function Timeline({ events }) {
 
 // ─── Main Component ──────────────────────────────────
 export default function PurchaseOrders() {
-  const [orders, setOrders] = useState([])
-  const [vendors, setVendors] = useState([])
+  const [orders, setOrders] = useState(initialOrders)
+  const [vendors, setVendors] = useState(initialVendors)
   const [rfqs, setRfqs] = useState([])
-  const [requisitions, setRequisitions] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [requisitions, setRequisitions] = useState(initialRequisitions)
+  const [loading, setLoading] = useState(false)
 
   const [filterStatus, setFilterStatus] = useState('All')
   const [searchTerm, setSearchTerm] = useState('')
@@ -120,7 +121,6 @@ export default function PurchaseOrders() {
 
   // ── Fetching ────────────────────────────────────────
   const fetchAll = async () => {
-    setLoading(true)
     try {
       const params = new URLSearchParams()
       if (filterStatus !== 'All') params.append('status', filterStatus)
@@ -132,11 +132,23 @@ export default function PurchaseOrders() {
         fetch('/api/rfq'),
         fetch('/api/requisitions'),
       ])
-      const [poJ, vJ, rfqJ, reqJ] = await Promise.all([poRes.json(), vRes.json(), rfqRes.json(), reqRes.json()])
-      if (poJ.success) setOrders(poJ.data)
-      if (vJ.success) setVendors(vJ.data)
-      if (rfqJ.success) setRfqs(rfqJ.data)
-      if (reqJ.success) setRequisitions(reqJ.data)
+
+      if (poRes.ok) {
+        const poJ = await poRes.json()
+        if (poJ.success && poJ.data && poJ.data.length > 0) setOrders(poJ.data)
+      }
+      if (vRes.ok) {
+        const vJ = await vRes.json()
+        if (vJ.success && vJ.data && vJ.data.length > 0) setVendors(vJ.data)
+      }
+      if (rfqRes.ok) {
+        const rfqJ = await rfqRes.json()
+        if (rfqJ.success && rfqJ.data) setRfqs(rfqJ.data)
+      }
+      if (reqRes.ok) {
+        const reqJ = await reqRes.json()
+        if (reqJ.success && reqJ.data && reqJ.data.length > 0) setRequisitions(reqJ.data)
+      }
     } catch (err) { console.error(err) }
     finally { setLoading(false) }
   }

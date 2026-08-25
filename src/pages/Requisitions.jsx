@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import { Card, StatusBadge, PriorityBadge, Table, Td } from '../components/ui'
+import { requisitions as initialRequisitions } from '../data'
 import {
   Plus,
   Upload,
@@ -21,9 +22,9 @@ import {
 } from 'lucide-react'
 
 export default function Requisitions() {
-  const [requisitions, setRequisitions] = useState([])
+  const [requisitions, setRequisitions] = useState(initialRequisitions)
   const [departments, setDepartments] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   const [filterDept, setFilterDept] = useState('All')
   const [filterStatus, setFilterStatus] = useState('All')
   const [filterPriority, setFilterPriority] = useState('All')
@@ -69,7 +70,6 @@ export default function Requisitions() {
   }
 
   const fetchRequisitions = async () => {
-    setLoading(true)
     try {
       const params = new URLSearchParams()
       if (filterDept !== 'All') params.append('dept', filterDept)
@@ -78,9 +78,11 @@ export default function Requisitions() {
       if (searchTerm) params.append('search', searchTerm)
 
       const res = await fetch(`/api/requisitions?${params.toString()}`)
-      const json = await res.json()
-      if (json.success) {
-        setRequisitions(json.data)
+      if (res.ok) {
+        const json = await res.json()
+        if (json.success && json.data && json.data.length > 0) {
+          setRequisitions(json.data)
+        }
       }
     } catch (err) {
       console.error('Error fetching requisitions:', err)

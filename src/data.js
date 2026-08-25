@@ -62,13 +62,22 @@ export const requisitions = [
 ]
 
 export const vendors = [
-  { id: 'V-001', name: 'Al-Noor Steel Co.', category: 'Raw Materials', location: 'Lahore, PK', ntn: 'NTN-4471-2', cert: 'ISO 9001' },
-  { id: 'V-002', name: 'Crescent Logistics', category: 'Logistics', location: 'Karachi, PK', ntn: 'NTN-2290-8', cert: 'ISO 14001' },
-  { id: 'V-003', name: 'Metro Packaging Ltd.', category: 'Packaging', location: 'Sahiwal, PK', ntn: 'NTN-9012-1', cert: 'Duplicate record' },
-  { id: 'V-004', name: 'TechSphere Systems', category: 'IT & Electronics', location: 'Islamabad, PK', ntn: 'NTN-5581-9', cert: 'ISO 27001' },
-  { id: 'V-005', name: 'Punjab Office Supplies', category: 'Office Supplies', location: 'Multan, PK', ntn: 'NTN-3345-4', cert: '—' },
-  { id: 'V-006', name: 'Faisalabad Forge Ltd.', category: 'Raw Materials', location: 'Faisalabad, PK', ntn: 'NTN-7712-6', cert: 'ISO 9001' },
+  { id: 'V-001', name: 'Al-Noor Steel Co.', category: 'Raw Materials', contact_person: 'Tariq Al-Noor', email: 'sales@alnoorsteel.com', phone: '+92 42 3571 8899', location: 'Lahore, PK', status: 'Active', ntn: 'NTN-4471-2', strn: 'STRN-3277-8899-1', tax_filer_status: 'Active Filer', tax_wht_pct: 3, cert: 'ISO 9001', bank_name: 'Meezan Bank', account_title: 'Al-Noor Steel', account_no: '01020304050607', iban: 'PK36MEZN0001020304050607', swift_code: 'MEZNPKKA', rating: 96, delivery_score: 98, quality_score: 97, cost_efficiency_score: 94, contract_compliance_score: 95, on_time_rate: 98, quality_compliance: 97, completed_orders_count: 42 },
+  { id: 'V-002', name: 'Crescent Logistics', category: 'Logistics', contact_person: 'Shahid Khan', email: 'ops@crescentlogistics.pk', phone: '+92 21 3455 1122', location: 'Karachi, PK', status: 'Active', ntn: 'NTN-2290-8', strn: 'STRN-1199-2233-4', tax_filer_status: 'Active Filer', tax_wht_pct: 3, cert: 'ISO 14001', bank_name: 'Habib Bank Ltd', account_title: 'Crescent Freight', account_no: '00427900112233', iban: 'PK92HABB0000427900112233', swift_code: 'HABBPKKA', rating: 94, delivery_score: 95, quality_score: 96, cost_efficiency_score: 92, contract_compliance_score: 93, on_time_rate: 95, quality_compliance: 96, completed_orders_count: 38 },
+  { id: 'V-003', name: 'Metro Packaging Ltd.', category: 'Packaging', contact_person: 'Usman Chaudhry', email: 'info@metropackaging.com', phone: '+92 40 4220 900', location: 'Sahiwal, PK', status: 'Active', ntn: 'NTN-9012-1', strn: 'STRN-9012-3344-5', tax_filer_status: 'Active Filer', tax_wht_pct: 4.5, cert: '—', bank_name: 'Bank Alfalah', account_title: 'Metro Packaging', account_no: '01881005544332', iban: 'PK14ALFH0188100554433201', swift_code: 'ALFHPKKA', rating: 85, delivery_score: 88, quality_score: 86, cost_efficiency_score: 84, contract_compliance_score: 82, on_time_rate: 88, quality_compliance: 86, completed_orders_count: 19 },
+  { id: 'V-004', name: 'TechSphere Systems', category: 'IT & Electronics', contact_person: 'Ayesha Raza', email: 'enterprise@techsphere.pk', phone: '+92 51 2890 441', location: 'Islamabad, PK', status: 'Active', ntn: 'NTN-5581-9', strn: 'STRN-5581-8877-6', tax_filer_status: 'Active Filer', tax_wht_pct: 3, cert: 'ISO 27001', bank_name: 'Standard Chartered', account_title: 'TechSphere Systems', account_no: '011899002211', iban: 'PK49SCBL0000011899002211', swift_code: 'SCBLPKKA', rating: 91, delivery_score: 93, quality_score: 94, cost_efficiency_score: 88, contract_compliance_score: 90, on_time_rate: 93, quality_compliance: 94, completed_orders_count: 27 },
+  { id: 'V-005', name: 'Punjab Office Supplies', category: 'Office Supplies', contact_person: 'Rashid Mahmood', email: 'orders@punjabsupplies.pk', phone: '+92 61 4511 770', location: 'Multan, PK', status: 'Active', ntn: 'NTN-3345-4', strn: 'STRN-3345-7788-9', tax_filer_status: 'Active Filer', tax_wht_pct: 4.5, cert: '—', bank_name: 'MCB Bank', account_title: 'Punjab Office Supplies', account_no: '056711223344', iban: 'PK71MUCB0567112233440001', swift_code: 'MUCBPKKA', rating: 88, delivery_score: 90, quality_score: 89, cost_efficiency_score: 86, contract_compliance_score: 87, on_time_rate: 90, quality_compliance: 89, completed_orders_count: 31 },
+  { id: 'V-006', name: 'Faisalabad Forge Ltd.', category: 'Raw Materials', contact_person: 'Zubair Sheikh', email: 'contact@faisalabadforge.com', phone: '+92 41 8722 344', location: 'Faisalabad, PK', status: 'Under Review', ntn: 'NTN-7712-6', strn: 'STRN-7712-1122-3', tax_filer_status: 'Non-Filer', tax_wht_pct: 6, cert: 'ISO 9001', bank_name: 'United Bank Ltd', account_title: 'Faisalabad Forge', account_no: '098112233445', iban: 'PK20UNIL0981122334450001', swift_code: 'UNILPKKA', rating: 82, delivery_score: 80, quality_score: 84, cost_efficiency_score: 82, contract_compliance_score: 81, on_time_rate: 80, quality_compliance: 84, completed_orders_count: 14 }
 ]
+
+export const vendorStats = {
+  total_vendors: 6,
+  active_vendors: 5,
+  under_review: 1,
+  certified_count: 4,
+  active_filers: 5,
+  average_rating: 89.3
+}
 
 export const vendorPerformance = [
   { name: 'On-Time Delivery', value: 92 },
@@ -99,10 +108,19 @@ export const grns = [
 ]
 
 export const approvalQueue = [
-  { id: 'REQ-4471', label: 'Ergonomic Office Chairs (40 units)', priority: 'High', stage: 'Dept Manager' },
-  { id: 'PO-2026-08355', label: 'IT Hardware Refresh Batch 4', priority: 'Normal', stage: 'Finance' },
-  { id: 'REQ-4488', label: 'Emergency Generator Servicing', priority: 'Urgent', stage: 'Procurement' },
+  { id: 'APP-001', target_type: 'Requisition', target_id: 'REQ-4471', title: 'Ergonomic Office Chairs (40 units)', department: 'Human Resources', requested_by: 'Sana Malik', amount: 12000, priority: 'High', current_stage: 'Dept Manager', required_stages: ['Dept Manager', 'Finance'], status: 'Pending', overdue: false, hours_pending: 14, approval_trail: [{ stage: 'Dept Manager', status: 'Pending' }] },
+  { id: 'APP-002', target_type: 'Requisition', target_id: 'REQ-4455', title: 'Warehouse Racking System', department: 'Warehouse Ops', requested_by: 'Ali Raza', amount: 35000, priority: 'Urgent', current_stage: 'Finance', required_stages: ['Dept Manager', 'Finance', 'Procurement'], status: 'Pending', overdue: true, hours_pending: 28, approval_trail: [{ stage: 'Dept Manager', status: 'Approved', approver: 'WMS Manager' }, { stage: 'Finance', status: 'Pending' }] },
+  { id: 'APP-003', target_type: 'Purchase Order', target_id: 'PO-2026-001', title: 'Industrial Steel Rods (500 units)', department: 'Manufacturing', requested_by: 'Bilal Ahmed', amount: 48204, priority: 'High', current_stage: 'Procurement', required_stages: ['Dept Manager', 'Finance', 'Procurement'], status: 'Pending', overdue: false, hours_pending: 8, approval_trail: [{ stage: 'Dept Manager', status: 'Approved' }, { stage: 'Finance', status: 'Approved' }] },
+  { id: 'APP-004', target_type: 'Requisition', target_id: 'REQ-4441', title: 'Generator Maintenance Contract', department: 'Facilities', requested_by: 'Usman Sheikh', amount: 65000, priority: 'Urgent', current_stage: 'CEO', required_stages: ['Dept Manager', 'Finance', 'Procurement', 'CEO'], status: 'Rejected', overdue: false, hours_pending: 0 }
 ]
+
+export const approvalStats = {
+  total_pending: 3,
+  total_escalated: 1,
+  ceo_pending: 0,
+  pending_value: 95204,
+  total_count: 4
+}
 
 export const navSections = [
   {

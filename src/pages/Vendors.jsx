@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import { Card, Table, Td } from '../components/ui'
+import { vendors as initialVendors, vendorStats as initialStats } from '../data'
 import {
   Plus, X, Search, Filter, Building2, ShieldCheck, CreditCard,
   Star, MapPin, Mail, Phone, Globe, Calendar, Award, TrendingUp,
@@ -54,9 +55,9 @@ function ScoreBar({ score }) {
 
 // ─── Main Vendors Component ────────────────────────────
 export default function Vendors() {
-  const [vendors, setVendors] = useState([])
-  const [stats, setStats] = useState({ total_vendors: 0, active_vendors: 0, under_review: 0, certified_count: 0, active_filers: 0, average_rating: 0 })
-  const [loading, setLoading] = useState(true)
+  const [vendors, setVendors] = useState(initialVendors)
+  const [stats, setStats] = useState(initialStats)
+  const [loading, setLoading] = useState(false)
 
   const [filterCategory, setFilterCategory] = useState('All')
   const [filterStatus, setFilterStatus] = useState('All')
@@ -95,7 +96,6 @@ export default function Vendors() {
 
   // ─── Fetching ────────────────────────────────────────
   const fetchAll = async () => {
-    setLoading(true)
     try {
       const params = new URLSearchParams()
       if (filterCategory !== 'All') params.append('category', filterCategory)
@@ -106,10 +106,14 @@ export default function Vendors() {
         fetch(`/api/vendors?${params}`),
         fetch('/api/vendors/stats'),
       ])
-      const [vJson, sJson] = await Promise.all([vRes.json(), sRes.json()])
-
-      if (vJson.success) setVendors(vJson.data)
-      if (sJson.success) setStats(sJson.data)
+      if (vRes.ok) {
+        const vJson = await vRes.json()
+        if (vJson.success && vJson.data && vJson.data.length > 0) setVendors(vJson.data)
+      }
+      if (sRes.ok) {
+        const sJson = await sRes.json()
+        if (sJson.success && sJson.data) setStats(sJson.data)
+      }
     } catch (err) {
       console.error(err)
     } finally {
