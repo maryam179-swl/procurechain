@@ -49,6 +49,11 @@ app.use((err, req, res, next) => {
   res.status(500).json({ success: false, error: err.message || 'Internal Server Error' })
 })
 
-app.listen(PORT, () => {
-  console.log(`ProcureChain Backend API running on http://localhost:${PORT}`)
-})
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`ProcureChain Backend API running on http://localhost:${PORT}`)
+  })
+}
+
+export default app
+
