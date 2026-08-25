@@ -673,22 +673,27 @@ export const initialData = {
 }
 
 // ─── Helpers ─────────────────────────────────────────
+function getDbFilePath() {
+  const p1 = path.resolve(process.cwd(), 'server', 'db.json')
+  const p2 = path.resolve(process.cwd(), 'db.json')
+  if (fs.existsSync(p1)) return p1
+  if (fs.existsSync(p2)) return p2
+  return p1
+}
+
 function loadData() {
   try {
-    if (!fs.existsSync(dbFilePath)) {
-      fs.writeFileSync(dbFilePath, JSON.stringify(initialData, null, 2))
+    const filePath = getDbFilePath()
+    if (!fs.existsSync(filePath)) {
       return JSON.parse(JSON.stringify(initialData))
     }
-    const content = fs.readFileSync(dbFilePath, 'utf-8')
+    const content = fs.readFileSync(filePath, 'utf-8')
     const parsed = JSON.parse(content)
-    let updated = false
     for (const key of Object.keys(initialData)) {
       if (!parsed[key] || (Array.isArray(parsed[key]) && parsed[key].length === 0)) {
         parsed[key] = initialData[key]
-        updated = true
       }
     }
-    if (updated) fs.writeFileSync(dbFilePath, JSON.stringify(parsed, null, 2))
     return parsed
   } catch (err) {
     console.error('Error reading db.json:', err)
@@ -698,11 +703,13 @@ function loadData() {
 
 function saveData(data) {
   try {
-    fs.writeFileSync(dbFilePath, JSON.stringify(data, null, 2))
+    const filePath = getDbFilePath()
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2))
   } catch (err) {
-    console.error('Error writing db.json:', err)
+    // Ignore read-only filesystem errors in serverless environments like Vercel
   }
 }
+
 
 function computeBudgetStatus(utilizationPct) {
   if (utilizationPct > 100) return 'Over Budget'
