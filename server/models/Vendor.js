@@ -1,0 +1,35 @@
+import mongoose from 'mongoose'
+
+const vendorSchema = new mongoose.Schema({
+  id: { type: String, required: true, unique: true },
+  name: { type: String, required: true },
+  category: { type: String, required: true },
+  contact_person: String,
+  email: String,
+  phone: String,
+  location: String,
+  website: String,
+  established_year: Number,
+  status: { type: String, default: 'Active' },
+  ntn: String,
+  strn: String,
+  tax_filer_status: { type: String, default: 'Active Filer' },
+  tax_wht_pct: { type: Number, default: 3 },
+  cert: String,
+  cert_expiry: String,
+  bank_name: String,
+  account_title: String,
+  account_no: String,
+  iban: String,
+  swift_code: String,
+  rating: { type: Number, default: 85 },
+  delivery_score: { type: Number, default: 85 },
+  quality_score: { type: Number, default: 85 },
+  cost_efficiency_score: { type: Number, default: 85 },
+  contract_compliance_score: { type: Number, default: 85 },
+  on_time_rate: { type: Number, default: 90 },
+  quality_compliance: { type: Number, default: 90 },
+  completed_orders_count: { type: Number, default: 0 },
+}, { timestamps: true })
+
+export default mongoose.models.Vendor || mongoose.model('Vendor', vendorSchema)

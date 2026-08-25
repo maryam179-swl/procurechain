@@ -1,0 +1,1225 @@
+{
+  "departments": [
+    {
+      "id": "DEPT-01",
+      "name": "Human Resources",
+      "code": "HR"
+    },
+    {
+      "id": "DEPT-02",
+      "name": "IT Infrastructure",
+      "code": "IT"
+    },
+    {
+      "id": "DEPT-03",
+      "name": "Manufacturing",
+      "code": "MFG"
+    },
+    {
+      "id": "DEPT-04",
+      "name": "Warehouse Ops",
+      "code": "WMS"
+    },
+    {
+      "id": "DEPT-05",
+      "name": "Admin Services",
+      "code": "ADM"
+    },
+    {
+      "id": "DEPT-06",
+      "name": "Facilities",
+      "code": "FAC"
+    },
+    {
+      "id": "DEPT-07",
+      "name": "Logistics",
+      "code": "LOG"
+    }
+  ],
+  "budgets": [
+    {
+      "id": "BDG-2026-001",
+      "dept": "Manufacturing",
+      "code": "MFG",
+      "fiscal_year": "2026",
+      "quarter": "Annual",
+      "allocated_budget": 250000,
+      "spent_amount": 145000,
+      "committed_amount": 48204,
+      "remaining_budget": 56796,
+      "utilization_pct": 77.3,
+      "status": "Healthy",
+      "category_allocations": [
+        {
+          "category": "Raw Materials",
+          "allocated": 180000,
+          "spent": 145000
+        },
+        {
+          "category": "Equipment & Machinery",
+          "allocated": 50000,
+          "spent": 30000
+        },
+        {
+          "category": "Consumables",
+          "allocated": 20000,
+          "spent": 18204
+        }
+      ],
+      "notes": "Q3 raw steel allocation included.",
+      "created_by": "Finance Director",
+      "created_at": "2026-02-11T08:12:05.030Z"
+    },
+    {
+      "id": "BDG-2026-002",
+      "dept": "IT Infrastructure",
+      "code": "IT",
+      "fiscal_year": "2026",
+      "quarter": "Annual",
+      "allocated_budget": 150000,
+      "spent_amount": 98000,
+      "committed_amount": 41145,
+      "remaining_budget": 10855,
+      "utilization_pct": 92.8,
+      "status": "Near Limit",
+      "category_allocations": [
+        {
+          "category": "Hardware & Laptops",
+          "allocated": 70000,
+          "spent": 55000
+        },
+        {
+          "category": "Software & Subscriptions",
+          "allocated": 50000,
+          "spent": 44000
+        },
+        {
+          "category": "Cloud Infrastructure",
+          "allocated": 30000,
+          "spent": 40145
+        }
+      ],
+      "notes": "Near limit due to dev laptop onboarding capex.",
+      "created_by": "IT Manager",
+      "created_at": "2026-02-11T08:12:05.032Z"
+    },
+    {
+      "id": "BDG-2026-003",
+      "dept": "Facilities",
+      "code": "FAC",
+      "fiscal_year": "2026",
+      "quarter": "Annual",
+      "allocated_budget": 80000,
+      "spent_amount": 68000,
+      "committed_amount": 15000,
+      "remaining_budget": -3000,
+      "utilization_pct": 103.8,
+      "status": "Over Budget",
+      "category_allocations": [
+        {
+          "category": "Maintenance Contracts",
+          "allocated": 50000,
+          "spent": 55000
+        },
+        {
+          "category": "Utilities & Repairs",
+          "allocated": 30000,
+          "spent": 28000
+        }
+      ],
+      "notes": "Exceeded budget due to emergency generator servicing.",
+      "created_by": "Facilities Manager",
+      "created_at": "2026-02-11T08:12:05.032Z"
+    },
+    {
+      "id": "BDG-2026-004",
+      "dept": "Human Resources",
+      "code": "HR",
+      "fiscal_year": "2026",
+      "quarter": "Annual",
+      "allocated_budget": 60000,
+      "spent_amount": 28000,
+      "committed_amount": 12000,
+      "remaining_budget": 20000,
+      "utilization_pct": 66.7,
+      "status": "Healthy",
+      "category_allocations": [
+        {
+          "category": "Office Furniture",
+          "allocated": 35000,
+          "spent": 24000
+        },
+        {
+          "category": "Training & Development",
+          "allocated": 25000,
+          "spent": 16000
+        }
+      ],
+      "notes": "Ergonomic chairs purchase completed.",
+      "created_by": "HR Director",
+      "created_at": "2026-02-11T08:12:05.032Z"
+    },
+    {
+      "id": "BDG-2026-005",
+      "dept": "Warehouse Ops",
+      "code": "WMS",
+      "fiscal_year": "2026",
+      "quarter": "Annual",
+      "allocated_budget": 110000,
+      "spent_amount": 62000,
+      "committed_amount": 35000,
+      "remaining_budget": 13000,
+      "utilization_pct": 88.2,
+      "status": "Near Limit",
+      "category_allocations": [
+        {
+          "category": "Racking & Storage",
+          "allocated": 70000,
+          "spent": 62000
+        },
+        {
+          "category": "Packaging & Supplies",
+          "allocated": 40000,
+          "spent": 35000
+        }
+      ],
+      "notes": "Warehouse rack expansion in progress.",
+      "created_by": "WMS Manager",
+      "created_at": "2026-02-11T08:12:05.032Z"
+    },
+    {
+      "id": "BDG-2026-006",
+      "dept": "Logistics",
+      "code": "LOG",
+      "fiscal_year": "2026",
+      "quarter": "Annual",
+      "allocated_budget": 95000,
+      "spent_amount": 45000,
+      "committed_amount": 18000,
+      "remaining_budget": 32000,
+      "utilization_pct": 66.3,
+      "status": "Healthy",
+      "category_allocations": [
+        {
+          "category": "Freight & Haulage",
+          "allocated": 65000,
+          "spent": 42000
+        },
+        {
+          "category": "Customs Clearance",
+          "allocated": 30000,
+          "spent": 21000
+        }
+      ],
+      "notes": "Port Qasim freight contracts on schedule.",
+      "created_by": "Logistics Head",
+      "created_at": "2026-02-11T08:12:05.032Z"
+    }
+  ],
+  "vendors": [
+    {
+      "id": "V-001",
+      "name": "Al-Noor Steel Co.",
+      "category": "Raw Materials",
+      "contact_person": "Tariq Al-Noor",
+      "email": "sales@alnoorsteel.com",
+      "phone": "+92 42 3571 8899",
+      "location": "Plot 45, Quaid-e-Azam Industrial Estate, Lahore, PK",
+      "website": "https://alnoorsteel.com",
+      "established_year": 2008,
+      "status": "Active",
+      "ntn": "NTN-4471-2",
+      "strn": "STRN-3277-8899-1",
+      "tax_filer_status": "Active Filer",
+      "tax_wht_pct": 3,
+      "cert": "ISO 9001",
+      "cert_expiry": "2027-12-31",
+      "bank_name": "Meezan Bank Ltd.",
+      "account_title": "Al-Noor Steel Company Ltd",
+      "account_no": "01020304050607",
+      "iban": "PK36MEZN0001020304050607",
+      "swift_code": "MEZNPKKA",
+      "rating": 96,
+      "delivery_score": 98,
+      "quality_score": 97,
+      "cost_efficiency_score": 94,
+      "contract_compliance_score": 95,
+      "on_time_rate": 98,
+      "quality_compliance": 97,
+      "completed_orders_count": 42
+    },
+    {
+      "id": "V-002",
+      "name": "Crescent Logistics",
+      "category": "Logistics",
+      "contact_person": "Shahid Khan",
+      "email": "ops@crescentlogistics.pk",
+      "phone": "+92 21 3455 1122",
+      "location": "Port Qasim Freight Zone, Karachi, PK",
+      "website": "https://crescentlogistics.pk",
+      "established_year": 2012,
+      "status": "Active",
+      "ntn": "NTN-2290-8",
+      "strn": "STRN-1199-2233-4",
+      "tax_filer_status": "Active Filer",
+      "tax_wht_pct": 3,
+      "cert": "ISO 14001",
+      "cert_expiry": "2026-10-15",
+      "bank_name": "Habib Bank Ltd (HBL)",
+      "account_title": "Crescent Freight & Logistics",
+      "account_no": "00427900112233",
+      "iban": "PK92HABB0000427900112233",
+      "swift_code": "HABBPKKA",
+      "rating": 94,
+      "delivery_score": 95,
+      "quality_score": 96,
+      "cost_efficiency_score": 92,
+      "contract_compliance_score": 93,
+      "on_time_rate": 95,
+      "quality_compliance": 96,
+      "completed_orders_count": 38
+    },
+    {
+      "id": "V-003",
+      "name": "Metro Packaging Ltd.",
+      "category": "Packaging",
+      "contact_person": "Usman Chaudhry",
+      "email": "info@metropackaging.com",
+      "phone": "+92 40 4220 900",
+      "location": "GT Road Industrial Area, Sahiwal, PK",
+      "website": "https://metropackaging.com",
+      "established_year": 2015,
+      "status": "Active",
+      "ntn": "NTN-9012-1",
+      "strn": "STRN-9012-3344-5",
+      "tax_filer_status": "Active Filer",
+      "tax_wht_pct": 4.5,
+      "cert": "—",
+      "cert_expiry": null,
+      "bank_name": "Bank Alfalah Ltd.",
+      "account_title": "Metro Packaging Ltd",
+      "account_no": "01881005544332",
+      "iban": "PK14ALFH0188100554433201",
+      "swift_code": "ALFHPKKA",
+      "rating": 85,
+      "delivery_score": 88,
+      "quality_score": 86,
+      "cost_efficiency_score": 84,
+      "contract_compliance_score": 82,
+      "on_time_rate": 88,
+      "quality_compliance": 86,
+      "completed_orders_count": 19
+    },
+    {
+      "id": "V-004",
+      "name": "TechSphere Systems",
+      "category": "IT & Electronics",
+      "contact_person": "Ayesha Raza",
+      "email": "enterprise@techsphere.pk",
+      "phone": "+92 51 2890 441",
+      "location": "Evacuee Trust Complex, Blue Area, Islamabad, PK",
+      "website": "https://techsphere.pk",
+      "established_year": 2017,
+      "status": "Active",
+      "ntn": "NTN-5581-9",
+      "strn": "STRN-5581-8877-6",
+      "tax_filer_status": "Active Filer",
+      "tax_wht_pct": 3,
+      "cert": "ISO 27001",
+      "cert_expiry": "2028-06-30",
+      "bank_name": "Standard Chartered Bank",
+      "account_title": "TechSphere Systems Pvt Ltd",
+      "account_no": "011899002211",
+      "iban": "PK49SCBL0000011899002211",
+      "swift_code": "SCBLPKKA",
+      "rating": 91,
+      "delivery_score": 93,
+      "quality_score": 94,
+      "cost_efficiency_score": 88,
+      "contract_compliance_score": 90,
+      "on_time_rate": 93,
+      "quality_compliance": 94,
+      "completed_orders_count": 27
+    },
+    {
+      "id": "V-005",
+      "name": "Punjab Office Supplies",
+      "category": "Office Supplies",
+      "contact_person": "Rashid Mahmood",
+      "email": "orders@punjabsupplies.pk",
+      "phone": "+92 61 4511 770",
+      "location": "Multan Industrial Estate, Multan, PK",
+      "website": "https://punjabsupplies.pk",
+      "established_year": 2011,
+      "status": "Active",
+      "ntn": "NTN-3345-4",
+      "strn": "STRN-3345-7788-9",
+      "tax_filer_status": "Active Filer",
+      "tax_wht_pct": 4.5,
+      "cert": "—",
+      "cert_expiry": null,
+      "bank_name": "MCB Bank Ltd.",
+      "account_title": "Punjab Office Supplies Traders",
+      "account_no": "056711223344",
+      "iban": "PK71MUCB0567112233440001",
+      "swift_code": "MUCBPKKA",
+      "rating": 88,
+      "delivery_score": 90,
+      "quality_score": 89,
+      "cost_efficiency_score": 86,
+      "contract_compliance_score": 87,
+      "on_time_rate": 90,
+      "quality_compliance": 89,
+      "completed_orders_count": 31
+    },
+    {
+      "id": "V-006",
+      "name": "Faisalabad Forge Ltd.",
+      "category": "Raw Materials",
+      "contact_person": "Zubair Sheikh",
+      "email": "contact@faisalabadforge.com",
+      "phone": "+92 41 8722 344",
+      "location": "Small Industrial Estate, Faisalabad, PK",
+      "website": "https://faisalabadforge.com",
+      "established_year": 2005,
+      "status": "Under Review",
+      "ntn": "NTN-7712-6",
+      "strn": "STRN-7712-1122-3",
+      "tax_filer_status": "Non-Filer",
+      "tax_wht_pct": 6,
+      "cert": "ISO 9001",
+      "cert_expiry": "2026-08-20",
+      "bank_name": "United Bank Ltd (UBL)",
+      "account_title": "Faisalabad Forge Ltd",
+      "account_no": "098112233445",
+      "iban": "PK20UNIL0981122334450001",
+      "swift_code": "UNILPKKA",
+      "rating": 82,
+      "delivery_score": 80,
+      "quality_score": 84,
+      "cost_efficiency_score": 82,
+      "contract_compliance_score": 81,
+      "on_time_rate": 80,
+      "quality_compliance": 84,
+      "completed_orders_count": 14
+    },
+    {
+      "id": "V-007",
+      "name": "Alpha Electronics",
+      "category": "IT & Electronics",
+      "contact_person": "Imran Farooq",
+      "email": "sales@alphaelectronics.pk",
+      "phone": "+92 21 3538 9900",
+      "location": "S.I.T.E Area, Karachi, PK",
+      "website": "https://alphaelectronics.pk",
+      "established_year": 2019,
+      "status": "Active",
+      "ntn": "NTN-1192-3",
+      "strn": "STRN-1192-9988-7",
+      "tax_filer_status": "Active Filer",
+      "tax_wht_pct": 3,
+      "cert": "ISO 27001",
+      "cert_expiry": "2027-05-10",
+      "bank_name": "Faysal Bank Ltd.",
+      "account_title": "Alpha Electronics Pakistan",
+      "account_no": "034110099887",
+      "iban": "PK88FAYS0341100998870001",
+      "swift_code": "FAYSPKKA",
+      "rating": 79,
+      "delivery_score": 82,
+      "quality_score": 81,
+      "cost_efficiency_score": 75,
+      "contract_compliance_score": 78,
+      "on_time_rate": 82,
+      "quality_compliance": 81,
+      "completed_orders_count": 11
+    }
+  ],
+  "contracts": [
+    {
+      "id": "CNT-2026-001",
+      "vendor_id": "V-001",
+      "vendor_name": "Al-Noor Steel Co.",
+      "title": "Master Steel Supply Agreement",
+      "contract_type": "Master Services Agreement",
+      "contract_value": 120000,
+      "start_date": "2026-02-11T08:12:05.032Z",
+      "expiry_date": "2027-02-11T08:12:05.032Z",
+      "renewal_date": "2027-01-12T08:12:05.032Z",
+      "auto_renew": true,
+      "status": "Active",
+      "compliance_documents": [
+        "ISO 9001 Certificate",
+        "NDA Agreement",
+        "Tax Filer Compliance",
+        "SLA Schedule A"
+      ],
+      "attachments": [
+        {
+          "id": 1,
+          "original_name": "al_noor_master_contract.pdf",
+          "stored_name": "sample_contract.pdf",
+          "size_bytes": 542000,
+          "uploaded_at": "2026-02-11T08:12:05.032Z"
+        }
+      ],
+      "renewals_history": [
+        {
+          "id": "REN-01",
+          "renewed_on": "2026-02-11T08:12:05.032Z",
+          "new_expiry": "2027-02-11T08:12:05.032Z",
+          "renewed_by": "Legal Team",
+          "notes": "Initial 1-year master agreement executed."
+        }
+      ],
+      "notes": "Exclusivity clause applies to Grade A raw steel rods.",
+      "created_by": "Legal & Procurement",
+      "created_at": "2026-02-11T08:12:05.032Z"
+    },
+    {
+      "id": "CNT-2026-002",
+      "vendor_id": "V-004",
+      "vendor_name": "TechSphere Systems",
+      "title": "Enterprise IT Equipment & SLA Agreement",
+      "contract_type": "Service Level Agreement (SLA)",
+      "contract_value": 65000,
+      "start_date": "2025-08-25T08:12:05.032Z",
+      "expiry_date": "2026-08-25T08:12:05.032Z",
+      "renewal_date": "2026-07-26T08:12:05.032Z",
+      "auto_renew": false,
+      "status": "Expiring Soon",
+      "compliance_documents": [
+        "ISO 27001 Security Cert",
+        "Data Protection NDA",
+        "3-Year Hardware Warranty"
+      ],
+      "attachments": [],
+      "renewals_history": [],
+      "notes": "Renewal review pending hardware capex approval for Q4.",
+      "created_by": "IT Manager",
+      "created_at": "2025-08-25T08:12:05.032Z"
+    },
+    {
+      "id": "CNT-2026-003",
+      "vendor_id": "V-006",
+      "vendor_name": "Faisalabad Forge Ltd.",
+      "title": "Annual Forge & Casting Contract",
+      "contract_type": "Annual Maintenance Contract (AMC)",
+      "contract_value": 45000,
+      "start_date": "2025-07-06T08:12:05.032Z",
+      "expiry_date": "2026-07-06T08:12:05.032Z",
+      "renewal_date": "2026-06-06T08:12:05.032Z",
+      "auto_renew": false,
+      "status": "Expired",
+      "compliance_documents": [
+        "ISO 9001 Certificate"
+      ],
+      "attachments": [],
+      "renewals_history": [],
+      "notes": "Contract expired. Vendor under review due to delivery delays.",
+      "created_by": "Procurement Specialist",
+      "created_at": "2025-07-06T08:12:05.032Z"
+    }
+  ],
+  "complaints": [
+    {
+      "id": "CMP-001",
+      "vendor_id": "V-006",
+      "vendor_name": "Faisalabad Forge Ltd.",
+      "issue_type": "Late Delivery",
+      "severity": "High",
+      "status": "In Investigation",
+      "description": "Steel rod batch delivery delayed by 9 days beyond agreed PO SLA schedule.",
+      "logged_by": "Warehouse Lead (Ali Raza)",
+      "resolution_notes": "Vendor promised expedited dispatch by Friday with waived freight charges.",
+      "logged_at": "2026-08-07T08:12:05.032Z",
+      "resolved_at": null
+    },
+    {
+      "id": "CMP-002",
+      "vendor_id": "V-007",
+      "vendor_name": "Alpha Electronics",
+      "issue_type": "Defective Quality",
+      "severity": "Medium",
+      "status": "Resolved",
+      "description": "3 laptops out of 15 batch arrived with defective RAM modules and faulty trackpads.",
+      "logged_by": "IT Operations (Hamza Tariq)",
+      "resolution_notes": "Vendor replaced units within 48h under 2-year warranty agreement.",
+      "logged_at": "2026-08-03T08:12:05.032Z",
+      "resolved_at": "2026-08-05T08:12:05.032Z"
+    }
+  ],
+  "requisitions": [
+    {
+      "id": "REQ-4460",
+      "item": "Industrial Steel Rods (500 units)",
+      "dept": "Manufacturing",
+      "priority": "High",
+      "status": "Approved",
+      "requestedBy": "Bilal Ahmed",
+      "amount": 45000,
+      "notes": "Raw material batch for Q3 production line.",
+      "created_at": "2026-08-05T08:12:05.032Z"
+    },
+    {
+      "id": "REQ-4455",
+      "item": "Warehouse Racking System",
+      "dept": "Warehouse Ops",
+      "priority": "Urgent",
+      "status": "Pending",
+      "requestedBy": "Ali Raza",
+      "amount": 35000,
+      "notes": "Heavy duty palleted rack system.",
+      "created_at": "2026-08-04T08:12:05.032Z"
+    },
+    {
+      "id": "REQ-4449",
+      "item": "Printer Toner Cartridges (Bulk)",
+      "dept": "Admin Services",
+      "priority": "Normal",
+      "status": "Approved",
+      "requestedBy": "Fatima Noor",
+      "amount": 1800,
+      "notes": "Stock replenishment for headquarters.",
+      "created_at": "2026-08-02T08:12:05.032Z"
+    },
+    {
+      "id": "REQ-4441",
+      "item": "Generator Maintenance Contract",
+      "dept": "Facilities",
+      "priority": "Urgent",
+      "status": "Rejected",
+      "requestedBy": "Usman Sheikh",
+      "amount": 65000,
+      "notes": "Annual servicing agreement.",
+      "created_at": "2026-07-31T08:12:05.032Z"
+    },
+    {
+      "id": "REQ-4437",
+      "item": "Cloud Server Capacity Upgrade",
+      "dept": "IT Infrastructure",
+      "priority": "Normal",
+      "status": "Approved",
+      "requestedBy": "Hamza Tariq",
+      "amount": 9600,
+      "notes": "Expanded storage instance clusters.",
+      "created_at": "2026-07-29T08:12:05.032Z"
+    }
+  ],
+  "documents": [
+    {
+      "id": 1,
+      "requisition_id": "REQ-4471",
+      "original_name": "office_chairs_quote.pdf",
+      "stored_name": "sample_quote.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 245000,
+      "uploaded_at": "2026-08-21T08:39:58.873Z"
+    }
+  ],
+  "history": [
+    {
+      "id": 1,
+      "requisition_id": "REQ-4471",
+      "old_status": null,
+      "new_status": "Submitted",
+      "changed_by": "Sana Malik",
+      "comment": "Purchase Requisition Created",
+      "timestamp": "2026-08-21T12:16:51.974Z"
+    },
+    {
+      "id": 2,
+      "requisition_id": "REQ-4468",
+      "old_status": "Pending",
+      "new_status": "Approved",
+      "changed_by": "IT Manager",
+      "comment": "Approved budget request",
+      "timestamp": "2026-08-20T12:16:51.974Z"
+    }
+  ],
+  "rfqs": [
+    {
+      "id": "RFQ-2026-001",
+      "requisition_id": "REQ-4460",
+      "item": "Industrial Steel Rods (500 units)",
+      "category": "Raw Materials",
+      "budget": 45000,
+      "status": "Awarded",
+      "invited_vendors": [
+        "V-001",
+        "V-006"
+      ],
+      "awarded_vendor_id": "V-001",
+      "awarded_quotation_id": "QT-001",
+      "deadline": "2026-08-09T08:12:05.033Z",
+      "created_by": "Bilal Ahmed",
+      "notes": "Q3 production line material. Must be ISO 9001 certified supplier.",
+      "created_at": "2026-08-05T08:12:05.033Z"
+    },
+    {
+      "id": "RFQ-2026-002",
+      "requisition_id": "REQ-4468",
+      "item": "Dell Latitude Laptops (15 units)",
+      "category": "IT & Electronics",
+      "budget": 22500,
+      "status": "Under Evaluation",
+      "invited_vendors": [
+        "V-004",
+        "V-007"
+      ],
+      "awarded_vendor_id": null,
+      "awarded_quotation_id": null,
+      "deadline": "2026-08-12T08:12:05.033Z",
+      "created_by": "Hamza Tariq",
+      "notes": "Laptops must have min 16GB RAM, 512GB SSD, Win 11 Pro.",
+      "created_at": "2026-08-07T08:12:05.033Z"
+    }
+  ],
+  "quotations": [
+    {
+      "id": "QT-001",
+      "rfq_id": "RFQ-2026-001",
+      "vendor_id": "V-001",
+      "vendor_name": "Al-Noor Steel Co.",
+      "unit_price": 82.4,
+      "total_amount": 41200,
+      "lead_time_days": 12,
+      "warranty_terms": "1 Year Material Warranty",
+      "tech_score": 92,
+      "tech_remarks": "Fully compliant. Grade A steel rods. ISO 9001 verified.",
+      "status": "Awarded",
+      "submitted_at": "2026-08-07T08:12:05.033Z"
+    },
+    {
+      "id": "QT-002",
+      "rfq_id": "RFQ-2026-001",
+      "vendor_id": "V-006",
+      "vendor_name": "Faisalabad Forge Ltd.",
+      "unit_price": 79.6,
+      "total_amount": 39800,
+      "lead_time_days": 21,
+      "warranty_terms": "6 Months Replacement",
+      "tech_score": 78,
+      "tech_remarks": "Steel grade marginally compliant. Longer lead time is a concern.",
+      "status": "Evaluated",
+      "submitted_at": "2026-08-07T08:12:05.033Z"
+    },
+    {
+      "id": "QT-003",
+      "rfq_id": "RFQ-2026-002",
+      "vendor_id": "V-004",
+      "vendor_name": "TechSphere Systems",
+      "unit_price": 1243,
+      "total_amount": 18645,
+      "lead_time_days": 9,
+      "warranty_terms": "3 Year Manufacturer Warranty",
+      "tech_score": 95,
+      "tech_remarks": "Full spec compliance. 16GB RAM, 512GB NVMe SSD, Win 11 Pro.",
+      "status": "Submitted",
+      "submitted_at": "2026-08-09T08:12:05.033Z"
+    },
+    {
+      "id": "QT-004",
+      "rfq_id": "RFQ-2026-002",
+      "vendor_id": "V-007",
+      "vendor_name": "Alpha Electronics",
+      "unit_price": 1380,
+      "total_amount": 20700,
+      "lead_time_days": 14,
+      "warranty_terms": "2 Year On-Site Service",
+      "tech_score": 81,
+      "tech_remarks": "Meets spec but sourcing from third party. Slightly higher price.",
+      "status": "Submitted",
+      "submitted_at": "2026-08-09T08:12:05.033Z"
+    }
+  ],
+  "purchaseOrders": [
+    {
+      "id": "PO-2026-001",
+      "rfq_id": "RFQ-2026-001",
+      "requisition_id": "REQ-4460",
+      "vendor_id": "V-001",
+      "vendor_name": "Al-Noor Steel Co.",
+      "item": "Industrial Steel Rods (500 units)",
+      "category": "Raw Materials",
+      "quantity": 500,
+      "unit_price": 82.4,
+      "total_amount": 41200,
+      "tax_pct": 17,
+      "tax_amount": 7004,
+      "grand_total": 48204,
+      "currency": "PKR",
+      "payment_terms": "Net 30",
+      "payment_status": "Pending",
+      "delivery_address": "Plot 14, Industrial Zone, Lahore",
+      "delivery_date": "2026-08-22T08:12:05.033Z",
+      "status": "Confirmed",
+      "notes": "Deliver to main warehouse gate. Contact: Ali Raza 0321-XXXXXXX",
+      "created_by": "Bilal Ahmed",
+      "created_at": "2026-08-08T08:12:05.033Z",
+      "amendments": [],
+      "delivery_schedules": [
+        {
+          "id": "DS-001",
+          "milestone": "Partial Delivery (250 units)",
+          "date": "2026-08-17T08:12:05.033Z",
+          "qty": 250,
+          "status": "Scheduled"
+        },
+        {
+          "id": "DS-002",
+          "milestone": "Final Delivery (250 units)",
+          "date": "2026-08-22T08:12:05.033Z",
+          "qty": 250,
+          "status": "Scheduled"
+        }
+      ],
+      "tracking": [
+        {
+          "id": "TRK-001",
+          "event": "PO Created & Sent to Vendor",
+          "timestamp": "2026-08-08T08:12:05.033Z",
+          "actor": "Bilal Ahmed",
+          "note": "Order confirmed. Vendor acknowledged receipt."
+        },
+        {
+          "id": "TRK-002",
+          "event": "Vendor Confirmed",
+          "timestamp": "2026-08-09T08:12:05.033Z",
+          "actor": "Al-Noor Steel Co.",
+          "note": "Production schedule shared. On track."
+        },
+        {
+          "id": "TRK-1787489542553",
+          "event": "PO Approved",
+          "timestamp": "2026-08-23T12:52:22.553Z",
+          "actor": "Procurement Signoff",
+          "note": "Final approval granted by Procurement."
+        }
+      ]
+    },
+    {
+      "id": "PO-2026-002",
+      "rfq_id": "RFQ-2026-002",
+      "requisition_id": "REQ-4468",
+      "vendor_id": "V-004",
+      "vendor_name": "TechSphere Systems",
+      "item": "Dell Latitude Laptops (15 units)",
+      "category": "IT & Electronics",
+      "quantity": 15,
+      "unit_price": 1243,
+      "total_amount": 18645,
+      "tax_pct": 17,
+      "tax_amount": 3169.65,
+      "grand_total": 21814.65,
+      "currency": "PKR",
+      "payment_terms": "Net 15",
+      "payment_status": "Invoiced",
+      "delivery_address": "IT Dept, HQ Tower, Islamabad",
+      "delivery_date": "2026-08-19T08:12:05.033Z",
+      "status": "Pending",
+      "notes": "Pre-load Windows 11 Pro. Asset tagging required upon receipt.",
+      "created_by": "Hamza Tariq",
+      "created_at": "2026-08-09T08:12:05.033Z",
+      "amendments": [],
+      "delivery_schedules": [
+        {
+          "id": "DS-003",
+          "milestone": "Full Delivery (15 Laptops)",
+          "date": "2026-08-19T08:12:05.033Z",
+          "qty": 15,
+          "status": "Scheduled"
+        }
+      ],
+      "tracking": [
+        {
+          "id": "TRK-003",
+          "event": "PO Generated",
+          "timestamp": "2026-08-09T08:12:05.033Z",
+          "actor": "Hamza Tariq",
+          "note": "PO issued pending vendor signature."
+        }
+      ]
+    },
+    {
+      "id": "PO-2026-003",
+      "rfq_id": "RFQ-2026-003",
+      "requisition_id": "REQ-4471",
+      "vendor_id": "V-005",
+      "vendor_name": "Punjab Office Supplies",
+      "item": "Ergonomic Office Chairs (40 units)",
+      "category": "Office Supplies",
+      "quantity": 40,
+      "unit_price": 250,
+      "total_amount": 10000,
+      "tax_pct": 17,
+      "tax_amount": 1700,
+      "grand_total": 11700,
+      "currency": "PKR",
+      "payment_terms": "Net 30",
+      "payment_status": "Paid",
+      "delivery_address": "HR Dept Floor 3, HQ, Lahore",
+      "delivery_date": "2026-08-09T08:12:05.033Z",
+      "status": "Delivered",
+      "notes": "Delivered and inspected by Sana Malik.",
+      "created_by": "Sana Malik",
+      "created_at": "2026-08-05T08:12:05.033Z",
+      "amendments": [],
+      "delivery_schedules": [],
+      "tracking": [
+        {
+          "id": "TRK-004",
+          "event": "Order Delivered & Inspected",
+          "timestamp": "2026-08-09T08:12:05.033Z",
+          "actor": "Sana Malik",
+          "note": "All 40 units accepted in good order."
+        }
+      ]
+    }
+  ],
+  "approvals": [
+    {
+      "id": "APP-002",
+      "target_type": "Requisition",
+      "target_id": "REQ-4455",
+      "title": "Warehouse Racking System",
+      "department": "Warehouse Ops",
+      "requested_by": "Ali Raza",
+      "amount": 35000,
+      "priority": "Urgent",
+      "current_stage": "Procurement",
+      "required_stages": [
+        "Dept Manager",
+        "Finance",
+        "Procurement"
+      ],
+      "status": "Pending",
+      "overdue": false,
+      "hours_pending": 1,
+      "created_at": "2026-08-08T08:12:05.033Z",
+      "approval_trail": [
+        {
+          "stage": "Dept Manager",
+          "status": "Approved",
+          "approver": "WMS Manager (Tariq)",
+          "remarks": "Urgent expansion required.",
+          "timestamp": "2026-08-08T20:12:05.033Z"
+        },
+        {
+          "stage": "Finance",
+          "status": "Approved",
+          "approver": "Finance Signoff",
+          "remarks": "Approved via quick action.",
+          "timestamp": "2026-08-23T12:52:25.744Z"
+        },
+        {
+          "stage": "Procurement",
+          "status": "Pending",
+          "approver": null,
+          "remarks": null,
+          "timestamp": null
+        }
+      ]
+    },
+    {
+      "id": "APP-003",
+      "target_type": "Purchase Order",
+      "target_id": "PO-2026-001",
+      "title": "Industrial Steel Rods (500 units)",
+      "department": "Manufacturing",
+      "requested_by": "Bilal Ahmed",
+      "amount": 48204,
+      "priority": "High",
+      "current_stage": "Procurement",
+      "required_stages": [
+        "Dept Manager",
+        "Finance",
+        "Procurement"
+      ],
+      "status": "Approved",
+      "overdue": false,
+      "hours_pending": 0,
+      "created_at": "2026-08-09T08:12:05.033Z",
+      "approval_trail": [
+        {
+          "stage": "Dept Manager",
+          "status": "Approved",
+          "approver": "MFG Manager",
+          "remarks": "Approved for production batch.",
+          "timestamp": "2026-08-09T13:00:05.033Z"
+        },
+        {
+          "stage": "Finance",
+          "status": "Approved",
+          "approver": "CFO (Kamran)",
+          "remarks": "Capex budget verified.",
+          "timestamp": "2026-08-09T22:36:05.033Z"
+        },
+        {
+          "stage": "Procurement",
+          "status": "Approved",
+          "approver": "Procurement Signoff",
+          "remarks": "Approved via quick action.",
+          "timestamp": "2026-08-23T12:52:22.553Z"
+        }
+      ]
+    },
+    {
+      "id": "APP-004",
+      "target_type": "Requisition",
+      "target_id": "REQ-4441",
+      "title": "Generator Maintenance Contract",
+      "department": "Facilities",
+      "requested_by": "Usman Sheikh",
+      "amount": 65000,
+      "priority": "Urgent",
+      "current_stage": "CEO",
+      "required_stages": [
+        "Dept Manager",
+        "Finance",
+        "Procurement",
+        "CEO"
+      ],
+      "status": "Rejected",
+      "overdue": false,
+      "hours_pending": 0,
+      "rejection_reason": "Quote exceeded maximum allowable facilities threshold for Q3.",
+      "created_at": "2026-08-05T08:12:05.033Z",
+      "approval_trail": [
+        {
+          "stage": "Dept Manager",
+          "status": "Approved",
+          "approver": "Facilities Head",
+          "remarks": "Essential servicing.",
+          "timestamp": "2026-08-06T08:12:05.033Z"
+        },
+        {
+          "stage": "Finance",
+          "status": "Approved",
+          "approver": "Finance Controller",
+          "remarks": "Budget code 8820.",
+          "timestamp": "2026-08-07T08:12:05.033Z"
+        },
+        {
+          "stage": "Procurement",
+          "status": "Approved",
+          "approver": "Procurement Head",
+          "remarks": "Vendor vetted.",
+          "timestamp": "2026-08-08T08:12:05.033Z"
+        },
+        {
+          "stage": "CEO",
+          "status": "Rejected",
+          "approver": "CEO Office",
+          "remarks": "Exceeds threshold.",
+          "timestamp": "2026-08-09T08:12:05.033Z"
+        }
+      ]
+    }
+  ],
+  "warehouses": [
+    {
+      "id": "WH-01",
+      "name": "Lahore Central Fulfillment Hub",
+      "city": "Lahore",
+      "capacity_sqft": 85000,
+      "manager": "Ali Raza",
+      "status": "Active",
+      "current_occupancy_pct": 78
+    },
+    {
+      "id": "WH-02",
+      "name": "Port Qasim Freight Terminal",
+      "city": "Karachi",
+      "capacity_sqft": 120000,
+      "manager": "Shahid Khan",
+      "status": "Active",
+      "current_occupancy_pct": 84
+    },
+    {
+      "id": "WH-03",
+      "name": "Blue Area IT Asset Depot",
+      "city": "Islamabad",
+      "capacity_sqft": 35000,
+      "manager": "Hamza Tariq",
+      "status": "Active",
+      "current_occupancy_pct": 62
+    },
+    {
+      "id": "WH-04",
+      "name": "Sahiwal Manufacturing Store",
+      "city": "Sahiwal",
+      "capacity_sqft": 65000,
+      "manager": "Usman Chaudhry",
+      "status": "Active",
+      "current_occupancy_pct": 91
+    },
+    {
+      "id": "WH-05",
+      "name": "Multan Industrial Logistics",
+      "city": "Multan",
+      "capacity_sqft": 50000,
+      "manager": "Rashid Mahmood",
+      "status": "Active",
+      "current_occupancy_pct": 70
+    },
+    {
+      "id": "WH-06",
+      "name": "Faisalabad Raw Materials Center",
+      "city": "Faisalabad",
+      "capacity_sqft": 75000,
+      "manager": "Zubair Sheikh",
+      "status": "Active",
+      "current_occupancy_pct": 88
+    },
+    {
+      "id": "WH-07",
+      "name": "Rawalpindi Regional Warehouse",
+      "city": "Rawalpindi",
+      "capacity_sqft": 40000,
+      "manager": "Sana Malik",
+      "status": "Active",
+      "current_occupancy_pct": 55
+    },
+    {
+      "id": "WH-08",
+      "name": "Peshawar North Trade Hub",
+      "city": "Peshawar",
+      "capacity_sqft": 45000,
+      "manager": "Tariq Khan",
+      "status": "Active",
+      "current_occupancy_pct": 60
+    },
+    {
+      "id": "WH-09",
+      "name": "Quetta Freight Depot",
+      "city": "Quetta",
+      "capacity_sqft": 30000,
+      "manager": "Bilal Ahmed",
+      "status": "Active",
+      "current_occupancy_pct": 48
+    },
+    {
+      "id": "WH-10",
+      "name": "Sialkot Export Warehouse",
+      "city": "Sialkot",
+      "capacity_sqft": 55000,
+      "manager": "Imran Farooq",
+      "status": "Active",
+      "current_occupancy_pct": 75
+    },
+    {
+      "id": "WH-11",
+      "name": "Gujranwala Heavy Equipment Depot",
+      "city": "Gujranwala",
+      "capacity_sqft": 60000,
+      "manager": "Kashif Ali",
+      "status": "Active",
+      "current_occupancy_pct": 80
+    },
+    {
+      "id": "WH-12",
+      "name": "Hyderabad South Store",
+      "city": "Hyderabad",
+      "capacity_sqft": 42000,
+      "manager": "Asif Sheikh",
+      "status": "Active",
+      "current_occupancy_pct": 65
+    },
+    {
+      "id": "WH-13",
+      "name": "Sukkur Logistics Junction",
+      "city": "Sukkur",
+      "capacity_sqft": 38000,
+      "manager": "Kamran Raza",
+      "status": "Active",
+      "current_occupancy_pct": 50
+    },
+    {
+      "id": "WH-14",
+      "name": "Bahawalpur Storage Facility",
+      "city": "Bahawalpur",
+      "capacity_sqft": 32000,
+      "manager": "Noman Tariq",
+      "status": "Active",
+      "current_occupancy_pct": 42
+    },
+    {
+      "id": "WH-15",
+      "name": "Sheikhupura Industrial Annex",
+      "city": "Sheikhupura",
+      "capacity_sqft": 48000,
+      "manager": "Zulqarnain Ahmed",
+      "status": "Active",
+      "current_occupancy_pct": 72
+    },
+    {
+      "id": "WH-16",
+      "name": "Mardan North Logistics",
+      "city": "Mardan",
+      "capacity_sqft": 28000,
+      "manager": "Junaid Khan",
+      "status": "Active",
+      "current_occupancy_pct": 53
+    },
+    {
+      "id": "WH-17",
+      "name": "Gwadar Deep Port Terminal",
+      "city": "Gwadar",
+      "capacity_sqft": 150000,
+      "manager": "Sultan Port Ops",
+      "status": "Active",
+      "current_occupancy_pct": 35
+    },
+    {
+      "id": "WH-18",
+      "name": "Mirpur Azad Kashmir Depot",
+      "city": "Mirpur",
+      "capacity_sqft": 25000,
+      "manager": "Waqas Malik",
+      "status": "Active",
+      "current_occupancy_pct": 49
+    }
+  ],
+  "grns": [
+    {
+      "id": "GRN-2026-001",
+      "po_id": "PO-2026-003",
+      "item": "Ergonomic Office Chairs (40 units)",
+      "warehouse": "WH-01 Lahore Central Fulfillment Hub",
+      "received_qty": 40,
+      "accepted_qty": 40,
+      "rejected_qty": 0,
+      "status": "Inspected & Accepted",
+      "inspected_by": "Sana Malik",
+      "received_date": "2026-08-22T06:52:47.104Z",
+      "notes": "All 40 chairs passed quality QC."
+    },
+    {
+      "id": "GRN-2026-002",
+      "po_id": "PO-2026-001",
+      "item": "Industrial Steel Rods (250 units partial)",
+      "warehouse": "WH-04 Sahiwal Manufacturing Store",
+      "received_qty": 250,
+      "accepted_qty": 250,
+      "rejected_qty": 0,
+      "status": "Partial Receipt",
+      "inspected_by": "Ali Raza",
+      "received_date": "2026-08-23T06:52:47.104Z",
+      "notes": "Partial delivery milestone 1 received in good condition."
+    },
+    {
+      "id": "GRN-2026-003",
+      "po_id": "PO-2026-002",
+      "item": "Dell Latitude Laptops (15 units)",
+      "warehouse": "WH-03 Blue Area IT Asset Depot",
+      "received_qty": 15,
+      "accepted_qty": 12,
+      "rejected_qty": 3,
+      "status": "Pending QC",
+      "inspected_by": "Hamza Tariq",
+      "received_date": "2026-08-23T06:52:47.104Z",
+      "notes": "3 units flagged with box seal damage, under quarantine."
+    }
+  ]
+}
